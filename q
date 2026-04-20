@@ -41,7 +41,6 @@ if [[ GREP_PATTERN == "" ]] ; then
   funShowHelpAndExit
 fi
 
-THIS=$(basename $0)
 GREP_OPTS=""
 GREP_OPTS="${GREP_OPTS} --with-filename "
 if [[ $Q_NO_ICASE == 0 ]] ; then
