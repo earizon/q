@@ -38,7 +38,7 @@ done
 
 
 if [[ GREP_PATTERN == "" ]] ; then
-  exit 2
+  funShowHelpAndExit
 fi
 
 THIS=$(basename $0)

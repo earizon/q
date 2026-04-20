@@ -28,6 +28,9 @@ $ q "TODO" \
   -n "*py"         <·· search only inside files matching *py name
   -l 7             <·· search up to 7 levels in depth in sub.directories.
   -I               <·· search case sensitive. (insensitive by default)
+
+  WARN: Any flag comes after the (regex) search pattern. This allows
+  to make the script simple.
 ```
 
 ## Environment Variables
