@@ -1,5 +1,4 @@
 #!/bin/bash 
-set -e
 
 function funShowHelpAndExit() {
   cat << __EOF
@@ -14,8 +13,13 @@ Q_NO_ICASE=0                   # default value: ignore case
 
 readonly GREP_PATTERN=$1
 shift 1
+set -e
 
-while [ $# -gt 1 ]; do
+if [[ ${GREP_PATTERN} == "" ]]; then
+  funShowHelpAndExit
+fi
+
+while [ $# -gt 0 ]; do
   ## Echo "ASDF" for any non-matching case.
   case "$1" in
     -n)
